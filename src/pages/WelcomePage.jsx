@@ -4,6 +4,7 @@ import MainNavbar from '../components/main-navbar/MainNavbar'
 function WelcomePage() {
   return (
     <>
+    
     <MainNavbar></MainNavbar>
     <div>WelcomePage</div>
     </>

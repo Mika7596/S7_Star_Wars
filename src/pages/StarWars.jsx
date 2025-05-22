@@ -1,8 +1,13 @@
 import React from 'react'
+import SWHeader from '../components/sw-header/SWHeader'
+import MainNavbar from '../components/main-navbar/MainNavbar'
 
 function StarWars() {
   return (
-    <div>StarWars</div>
+    <>
+    <SWHeader/>
+    <MainNavbar/>
+    </>
   )
 }
 
