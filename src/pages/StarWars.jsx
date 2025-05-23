@@ -7,15 +7,13 @@ import SWCast from '../components/sw-cast/SWCast'
 import { DisplayCastContext } from '../contexts/display-actors.context'
 
 function StarWars() {
-    const {actorsAvailable, setActorsAvailable} = useContext(DisplayCastContext)
+    const {actorsAvailable} = useContext(DisplayCastContext)
 
 
   return (
     <>
     <SWHeader/>
     <MainNavbar/>
-    {/* <SWMain/>
-    <SWCast></SWCast> */}
     {actorsAvailable ? <SWCast></SWCast> : <SWMain></SWMain>}
     </>
   )
