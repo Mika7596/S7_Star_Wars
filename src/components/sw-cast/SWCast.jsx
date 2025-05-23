@@ -9,14 +9,11 @@ function SWCast() {
         let actorimg = actor.profile_path;
 
         return(
-            <SWCard key={index} content={actor.name} date={actor.character} src={`https://image.tmdb.org/t/p/w185/${actorimg}`}></SWCard>
+            <SWCard key={index} content={actor.name} date={actor.character} src={`https://image.tmdb.org/t/p/w185/${actorimg}`} button={false}></SWCard>
         )
 
     })
 
-    useEffect(() =>{
-        fetchActors()
-    }, [])
 
   return (
     <div>{cast ? castList : actorsError}</div>
