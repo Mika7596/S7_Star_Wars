@@ -4,12 +4,14 @@ import 'bootstrap/dist/css/bootstrap.css'
 import './index.css'
 import App from './App.jsx'
 import { SWProvider } from './contexts/sw.context.jsx'
+import { ActorsProvider } from './contexts/actors-card.context.jsx'
 
 createRoot(document.getElementById('root')).render(
   //<StrictMode>
     <SWProvider>
-    <App />
-
+      <ActorsProvider>
+        <App />
+      </ActorsProvider>
     </SWProvider>
   //</StrictMode>,
 )
