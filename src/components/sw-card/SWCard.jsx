@@ -2,10 +2,11 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 import { Button } from 'react-bootstrap';
 
+
 function SWCard(props) {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={props.src} />
+      <Card.Img variant="top" src={props.src} style={{height: "350px"}}/>
       <Card.Body className='text-center'>
         <Card.Title>{props.content}</Card.Title>
         <Card.Text>
