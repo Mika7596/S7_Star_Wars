@@ -4,7 +4,7 @@ import './main-navbar.css'
 
 function MainNavbar() {
   return (
-    <nav className="nav">
+    <nav className="nav my-3">
         <ul className='main-navbar-ul'>
             <li className='nav-link'><Link to="/home">Home</Link></li>
             <li className='nav-link'><Link to="/StarWars">Star Wars Movies</Link></li>
