@@ -1,8 +1,13 @@
 import React from 'react'
+import MainHeader from '../components/main-header/MainHeader'
+import MainNavbar from '../components/main-navbar/MainNavbar'
 
 function AllMovies() {
   return (
-    <div>AllMovies</div>
+    <>
+    <MainHeader></MainHeader>
+    <MainNavbar></MainNavbar>
+    </>
   )
 }
 
