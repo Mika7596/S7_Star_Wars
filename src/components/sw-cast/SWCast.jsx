@@ -33,7 +33,7 @@ function SWCast() {
 
   return (
     <>
-        <div style={{display:"flex", justifyContent:"center"}}>
+        <div style={{display:"flex", justifyContent:"center", backgroundColor:"black"}}>
         {selectedFilm && <SWCard key={filmid} content={selectedFilm.title} date={selectedFilm.release_date.slice(0, 4)} button={false} src={selectedFilm.poster_path ? `https://image.tmdb.org/t/p/w500/${selectedFilm.poster_path}` : "src/assets/star-wars-2-cropped.svg"}></SWCard>}
         </div>
         
