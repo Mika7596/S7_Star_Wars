@@ -4,7 +4,7 @@ import MainHeader from '../components/main-header/MainHeader'
 function Home() {
   return (
     <>
-    <MainHeader>hola</MainHeader>
+    <MainHeader></MainHeader>
     </>
 
 )}
