@@ -1,9 +1,12 @@
 import React from 'react'
+import MainHeader from '../components/main-header/MainHeader'
 
 function Home() {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+    <MainHeader>hola</MainHeader>
+    </>
+
+)}
 
 export default Home
