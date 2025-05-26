@@ -13,10 +13,10 @@ function SWCast() {
     
     }, [])
 
-    useEffect(() =>{
-        console.log(selectedFilm);
+    // useEffect(() =>{
+    //     console.log(selectedFilm);
 
-    }, [getSWMoviesById])
+    // }, [getSWMoviesById])
     
     const castList = cast.map((actor, index) =>{
         let actorimg = actor.profile_path;

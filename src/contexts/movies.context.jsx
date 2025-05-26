@@ -27,8 +27,21 @@ function MoviesProvider (props){
         }
     }
 
+     const getMovieById = async (id) => {
+        
+        try{
+            const KEY = import.meta.env.VITE_API_KEY;
+            const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${KEY}`)
+            const data = response.data;
+            
+            setSelectedFilm(data);
+        } catch (error){
+            setMovieError(true)
+        }
+    }
+
     return (
-        <MoviesContext.Provider value = {{allMovies, movieError, selectedFilm, fetchMovies}}>
+        <MoviesContext.Provider value = {{allMovies, movieError, selectedFilm, fetchMovies, getMovieById}}>
             {props.children}
         </MoviesContext.Provider>
     )

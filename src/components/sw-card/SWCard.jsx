@@ -18,7 +18,7 @@ function SWCard(props) {
   return (
     <Card 
     // style={{ width: '17rem', backgroundColor: "black", color: "white", borderColor: "white"}}
-    className="movie-card" style={{width:"17rem", backgroundColor: props.isSW ? "black" : "gray", color: props.isSW ? "white" : "black", borderColor: props.isSW ? "white" : "black"}}>
+    className="movie-card" style={{width:"17rem", backgroundColor: props.isSW ? "black" : "white", color: props.isSW ? "white" : "black", borderColor: props.isSW ? "white" : "black"}}>
       <Card.Img variant="top" src={props.src} style={{height: "300px"}} className='movie-poster rounded'/>
       <Card.Body className='text-center'>
         <Card.Title>{props.content}</Card.Title>
