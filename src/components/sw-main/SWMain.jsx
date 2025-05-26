@@ -26,7 +26,7 @@ function SWMain() {
 
   return (
     <>
-    <div className='sw-container'>{swError? "Problems with fetching SW movies data": sortedFilms.length > 0 ? sortedFilms : "No SW movie data found."}</div>
+    <div className='sw-container' style={{backgroundColor:"black"}}>{swError? "Problems with fetching SW movies data": sortedFilms.length > 0 ? sortedFilms : "No SW movie data found."}</div>
     
     </>
   )

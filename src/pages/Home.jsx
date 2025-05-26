@@ -1,6 +1,6 @@
 import React from 'react'
-import MainHeader from '../components/main-header/MainHeader'
-import MainNavbar from '../components/main-navbar/MainNavbar'
+import MainHeader from '../components/header/MainHeader'
+import MainNavbar from '../components/navbar/MainNavbar'
 import HomeContent from '../components/home-content/HomeContent'
 
 function Home() {
