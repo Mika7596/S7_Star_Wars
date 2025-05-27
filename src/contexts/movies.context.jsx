@@ -10,24 +10,7 @@ function MoviesProvider (props){
     const [loading, setLoading] = useState(false)
     const [movieError, setMovieError] = useState(false);
     const [selectedFilm, setSelectedFilm] = useState(null);
-
-    // const fetchMovies = async () => {
-    //     try{
-    //         const KEY = import.meta.env.VITE_API_KEY;
-    //         const SERVER = `https://api.themoviedb.org/3/discover/movie?api_key=${KEY}&sort_by=popularity.desc`
-    //         const response = await axios.get(SERVER)
-    //         const data = response.data;
-    //         console.log(data);
-    //         setAllMovies(data.results);
-    //         console.log(allMovies)
-            
-
-    //     } catch (error) {
-    //         console.log(`Something went wrong: ${error}`);
-            
-    //         setMovieError(true)
-    //     }
-    // }
+    
 
     const fetchMovies = useCallback(async (pageToLoad) =>{
         try{
