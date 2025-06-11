@@ -11,7 +11,7 @@ function MainNavbar() {
         <ul className='main-navbar-ul'>
             <li className='nav-link'><Link to="/home">Home</Link></li>
             <li className='nav-link' onClick={() => setActorsAvailable(false)}><Link to="/StarWars">Star Wars Movies</Link></li>
-            <li className='nav-link'><Link to="/all-movies">All Movies</Link></li>
+            <li className='nav-link' onClick={() => setActorsAvailable(false)}><Link to="/all-movies">All Movies</Link></li>
         </ul>
     </nav>
   )

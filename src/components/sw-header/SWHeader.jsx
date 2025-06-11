@@ -34,17 +34,27 @@ const navigate = useNavigate();
         <div style={{width:"22%"}}>
             <img src={logo} alt="Star Wars Logo" style={{maxWidth: "100%"}}/>
         </div>
+        
         <div style={{ textAlign: "end" }}>
+          <div
+          style={{ textAlign: "center" }}
+          onClick={() => {
+            navigate("/home");
+          }}
+        >
+          <i className="fa-solid fa-house"></i>
+          <br />
+        
           {currentUser ? (
             <>
-              <span style={{ marginRight: "10px" }}>
+              <span>
                 Hi, **{currentUser.email}**
               </span>
               <br />
               <button
                 onClick={logout}
                 className="btn btn-warning"
-                style={{ marginRight: "10px" }}
+                style={{ textAlign: "center" }}
               >
                 Log Out
               </button>
@@ -68,6 +78,7 @@ const navigate = useNavigate();
               </button>
             </>
           )}
+          </div>
         </div>
 
 

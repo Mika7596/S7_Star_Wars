@@ -34,6 +34,7 @@ function MainHeader() {
           <i className="fa-solid fa-house"></i>
         </div>
         <div style={{ textAlign: "end" }}>
+          
           {currentUser ? (
             <>
               <span style={{ marginRight: "10px" }}>
@@ -67,8 +68,9 @@ function MainHeader() {
               </button>
             </>
           )}
+          </div>
         </div>
-      </div>
+      
     </header>
   );
 }
