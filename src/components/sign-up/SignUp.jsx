@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 import {auth} from '../../firebase'
 
 function SignUp() {
@@ -7,6 +8,7 @@ function SignUp() {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const navigate = useNavigate();
 
     const handleRegister = async (error) => {
     error.preventDefault();
@@ -31,8 +33,11 @@ function SignUp() {
   };
 
   return (
+    <>
+    <div style={{backgroundImage:"url(src/assets/movie.svg)", backgroundSize:"contain", backgroundPosition: "center center", backgroundRepeat:"no-repeat", height: "200px", padding: "3%"}}></div>
+    
     <div style={{ maxWidth: '400px', margin: '50px auto', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' }}>
-      <h2>Registrarse</h2>
+      <h2>Sign Up</h2>
       <form onSubmit={handleRegister}>
         <div>
           <label>Email:</label>
@@ -45,7 +50,7 @@ function SignUp() {
           />
         </div>
         <div>
-          <label>Contraseña:</label>
+          <label>Password:</label>
           <input
             type="password"
             value={password}
@@ -55,13 +60,18 @@ function SignUp() {
           />
         </div>
         <button type="submit" style={{ padding: '10px 15px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
-          Registrar
+          Register
         </button>
+        <div className='text-center'>
+          <span>Already have an account?</span>
+          <br />
+          <button className='btn btn-warning' onClick={() => navigate('/log-in')}>login</button>
+        </div>
       </form>
       {error && <p style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
       {success && <p style={{ color: 'green', marginTop: '10px' }}>{success}</p>}
     </div>
-  )
+  </>)
 }
 
 export default SignUp

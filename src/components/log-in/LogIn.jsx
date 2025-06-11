@@ -29,9 +29,12 @@ function LogIn() {
     }
   };
 
-  return (
+  return (<>
+    <div style={{backgroundImage:"url(src/assets/movie.svg)", backgroundSize:"contain", backgroundPosition: "center center", backgroundRepeat:"no-repeat", height: "200px", padding: "3%"}}>
+
+    </div>
     <div style={{ maxWidth: '400px', margin: '50px auto', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' }}>
-      <h2>Iniciar Sesión</h2>
+      <h2>Log In</h2>
       <form onSubmit={handleLogin}>
         <div>
           <label>Email:</label>
@@ -44,7 +47,7 @@ function LogIn() {
           />
         </div>
         <div>
-          <label>Contraseña:</label>
+          <label>Password:</label>
           <input
             type="password"
             value={password}
@@ -54,12 +57,17 @@ function LogIn() {
           />
         </div>
         <button type="submit" style={{ padding: '10px 15px', backgroundColor: '#28a745', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
-          Iniciar Sesión
+          Log In
         </button>
+        <div className='text-center'>
+          <span>Don't have an account?</span>
+          <br />
+          <button className='btn btn-warning' onClick={() => navigate('/sign-up')}>Sing up</button>
+        </div>
       </form>
       {error && <p style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
     </div>
-  )
+  </>)
 }
 
 export default LogIn

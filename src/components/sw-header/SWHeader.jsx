@@ -1,11 +1,16 @@
 import React from 'react'
 import './sw-header.css'
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useNavigate } from 'react-router-dom';
+import { AuthProvider, useAuth } from "../../contexts/auth.context";
 
 import logo from '../../assets/star-wars-2-cropped.svg' 
 
+
+
 function SWHeader() {
+const { currentUser, logout } = useAuth();
+const navigate = useNavigate();
   return (
     <header className='text-light d-flex justify-content-between p-5 sw-header'>
         <div className="social">
@@ -18,7 +23,7 @@ function SWHeader() {
             <a href="https://x.com/starwars" target="_blank">
             <i className="fa-brands fa-x-twitter ms-3" style={{color: "white"}}></i>
             </a>
-            <FontAwesomeIcon icon="fa-brands fa-x-twitter" />
+            
             <a href="https://www.facebook.com/StarWars" target="_blank">
             <i className="bi bi-facebook ms-3"></i>
             </a>
@@ -29,10 +34,43 @@ function SWHeader() {
         <div style={{width:"22%"}}>
             <img src={logo} alt="Star Wars Logo" style={{maxWidth: "100%"}}/>
         </div>
-        <div>
-            <span>LOG IN </span>
-            <span>| SIGN UP</span>
+        <div style={{ textAlign: "end" }}>
+          {currentUser ? (
+            <>
+              <span style={{ marginRight: "10px" }}>
+                Hi, **{currentUser.email}**
+              </span>
+              <br />
+              <button
+                onClick={logout}
+                className="btn btn-warning"
+                style={{ marginRight: "10px" }}
+              >
+                Log Out
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                className="btn btn-warning"
+                style={{ marginRight: "10px" }}
+                onClick={() => {
+                  navigate("/sign-up");
+                }}
+              >
+                sign up
+              </button>
+              <button
+                className="btn btn-warning"
+                onClick={() => navigate("/log-in")}
+              >
+                login
+              </button>
+            </>
+          )}
         </div>
+
+
     </header>
   )
 }
