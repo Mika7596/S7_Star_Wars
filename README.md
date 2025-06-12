@@ -1,12 +1,27 @@
-# React + Vite
+# Movies API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React-based web application that allows users to explore movies and Star Wars movies in a separate page, using data from the TMDB API. Users can view a list of movies, see cast list of each film, and navigate through different pages. The project also supports pagination, protected routes, and user authentication.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
 
-## Expanding the ESLint configuration
+1. Clone the repository:
+git clone https://github.com/Mika7596/s7_Star_Wars.git
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. cd s7_Star_Wars
+
+3. Install dependencies:
+npm install
+
+4. Start the development server:
+npm run dev
+The application will probably run on http://localhost:5173
+
+## Technologies Used
+React – Frontend framework for building the user interface
+React Router – For navigation between different pages of the application
+Axios – For making API requests to fetch ship data and images
+Context – For managing global state
+Firebase – For user authentication and managing protected routes
+TMDB – Provides Star Wars ships data
+
