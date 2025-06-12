@@ -1,0 +1,48 @@
+
+.welcome-main{
+     display: flex; 
+     height: 100vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+.welcome-btn, .welcome-main{
+    animation-name: container;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+.welcome-content{
+    color: rgb(36, 1, 51);
+    margin: auto;
+    font-size: 2.8em;
+    font-weight: bold;
+    text-align: center;
+    
+}
+.welcome-second{
+    animation-name: second;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.welcome-first{
+    animation-name: first;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes container {
+    from{opacity: 0;}
+    to{opacity: 1;}
+    
+}
+
+@keyframes first {
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
+@keyframes second {
+    0%{opacity: 1;}
+    50%{opacity:0}
+    100%{opacity:1}
+}

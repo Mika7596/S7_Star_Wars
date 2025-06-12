@@ -1,0 +1,23 @@
+.movie-card{
+    overflow-x: hidden;
+}
+
+.movie-card:hover .movie-poster{
+animation-name: poster;
+animation-duration: 2s;
+animation-fill-mode: forwards;
+}
+
+@keyframes poster {
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(0.95)
+
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
